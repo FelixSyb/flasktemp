@@ -10,7 +10,7 @@ CORS(app)
 
 @app.route('/')
 def hello_world():
-    return '在此输入apikey 样式:sk-s5S5BoV...'
+    return '欢迎进入风语智能测试'
 
 # @app.route('/message',methods = ['POST'])
 # def mess():  # put application's code here
@@ -61,6 +61,16 @@ def mess():  # put application's code here
 
     res = {
             "resmsg":completion,
+            "code":200
+            }
+
+    return res
+
+@app.route('/message',methods = ['GET'])
+def get_test():  # put application's code here
+    print('Get Method')
+    res = {
+            "resmsg":'Get Method',
             "code":200
             }
 
